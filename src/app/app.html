@@ -1,0 +1,55 @@
+<div class="toolbox-header">
+  <h1>Haaly's Toolbox</h1>
+  <div class="theme-toggle">
+    <button matButton [matMenuTriggerFor]="mainMenu" title="Main menu">
+      <mat-icon aria-label="menu" fontIcon="more_vert"></mat-icon>
+    </button>
+    <mat-menu #mainMenu="matMenu">
+      <button mat-menu-item (click)="toggleDarkMode()">
+        {{ darkMode() ? 'Light mode' : 'Dark mode' }}
+      </button>
+    </mat-menu>
+  </div>
+</div>
+<!-- Under the header goes a generic menu area,
+ that's where any actions needed globally can be placed -->
+<mat-sidenav-container>
+  <mat-sidenav
+    mode="side"
+    opened
+    class="toolbox-sidenav"
+    [style.width.rem]="isSidebarOpen() ? 15 : 6"
+  >
+    <mat-nav-list>
+      <mat-list-item
+        (click)="toggleSidebar()"
+        class="toolbox-nav-header"
+      >
+        @if (isSidebarOpen()) {
+          <span matListItemTitle>
+            Tools
+            <mat-icon class="collapse-icon" fontIcon="keyboard_double_arrow_left"></mat-icon>
+          </span>
+        }
+        @else {
+          <mat-icon matListItemIcon fontIcon="keyboard_double_arrow_right"></mat-icon>
+        }
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListItemIcon fontIcon="assistant_navigation" aria-label="Sinum Navigator"></mat-icon>
+        @if (isSidebarOpen()) {
+        <span matListItemTitle>Sinum Navigator</span>
+        }
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListItemIcon fontIcon="print" aria-label="Proxy Printer"></mat-icon>
+        @if (isSidebarOpen()) {
+        <span matListItemTitle>Proxy Printer</span>
+        }
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="toolbox-content">
+    <router-outlet />
+  </mat-sidenav-content>
+</mat-sidenav-container>
