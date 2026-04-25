@@ -1,0 +1,19 @@
+name: Build and Deploy
+on:
+  push:
+    branches: [main] # Runs on push to main
+permissions:
+  contents: write
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 20, cache: 'npm'}
+      - run: npm ci
+      - run: npx ng build --configuration production --base-href /haaly-toolbox/
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist/haaly-toolbox/browser # Match your dist path
+          branch: gh-pages

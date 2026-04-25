@@ -25,7 +25,9 @@
               }
             ],
             "styles": ["src/material-theme.scss", "src/styles.scss", "src/styles/tokens.scss"],
-            "scripts": []
+            "scripts": [],
+            "outputPath": "dist/haaly-toolbox",
+            "baseHref": "/haaly-toolbox/"
           },
           "configurations": {
             "production": {
