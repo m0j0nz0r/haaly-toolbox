@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^21.2.0",
     "@angular/router": "^21.2.0",
     "rxjs": "~7.8.0",
+    "tacitus-card-printer": "github:m0j0nz0r/tacitus-card-printer",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

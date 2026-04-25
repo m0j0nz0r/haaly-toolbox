@@ -1,6 +1,6 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
   selector: 'app-root',
   imports: [
     RouterOutlet,
+    RouterModule,
     MatSidenavModule,
     MatMenuModule,
     MatIconModule,

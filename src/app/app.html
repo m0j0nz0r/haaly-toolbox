@@ -41,12 +41,12 @@
         <span matListItemTitle>Sinum Navigator</span>
         }
       </mat-list-item>
-      <mat-list-item>
+      <a mat-list-item [routerLink]="['/tacitus-card-printer']" routerLinkActive="active-link">
         <mat-icon matListItemIcon fontIcon="print" aria-label="Proxy Printer"></mat-icon>
         @if (isSidebarOpen()) {
         <span matListItemTitle>Proxy Printer</span>
         }
-      </mat-list-item>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="toolbox-content">
