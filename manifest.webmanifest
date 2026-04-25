@@ -1,0 +1,21 @@
+{
+  "name": "Haaly's Toolbox",
+  "short_name": "Haaly Toolbox",
+  "description": "A toolkit inspired by Haaly, a halfling rogue with raven hair and high charisma.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#16213e",
+  "theme_color": "#16213e",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}
