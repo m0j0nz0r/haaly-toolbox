@@ -13,6 +13,7 @@ jobs:
         with: {node-version: 20, cache: 'npm'}
       - run: npm ci
       - run: npx ng build --configuration production --base-href /haaly-toolbox/
+      - run: cp dist/haaly-toolbox/browser/index.html dist/haaly-toolbox/browser/404.html
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/haaly-toolbox/browser # Match your dist path
